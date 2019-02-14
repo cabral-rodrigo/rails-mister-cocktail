@@ -14,14 +14,8 @@ url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient_serialized = open(url).read
 ingredient = JSON.parse(ingredient_serialized)
 
-#json = ActiveSupport::JSON.decode(File.read('db/seeds/countries.json'))
-
 ingredient["drinks"].each do |a|
   Ingredient.create!(name: a['strIngredient1'])
 end
-
-#Ingredient.create(name: "lemon")
-#Ingredient.create(name: "ice")
-#Ingredient.create(name: "mint leaves")
 
 puts "finish seeds"
