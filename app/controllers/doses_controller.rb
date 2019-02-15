@@ -1,4 +1,4 @@
-class DosesController < ApplicationController
+  class DosesController < ApplicationController
   before_action :set_cocktails, only: [:new, :create]
 
   def new

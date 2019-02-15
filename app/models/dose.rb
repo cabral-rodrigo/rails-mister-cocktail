@@ -3,4 +3,5 @@ class Dose < ApplicationRecord
   belongs_to :cocktail
   validates :description, presence: true
   validates :cocktail, uniqueness: { scope: :ingredient }
+  mount_uploader :photo, PhotoUploader
 end

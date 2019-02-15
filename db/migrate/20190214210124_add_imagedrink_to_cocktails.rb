@@ -1,5 +1,5 @@
 class AddImagedrinkToCocktails < ActiveRecord::Migration[5.2]
   def change
-    add_column :cocktails, :Imagedrink, :string
+    add_column :cocktails, :photo, :string
   end
 end

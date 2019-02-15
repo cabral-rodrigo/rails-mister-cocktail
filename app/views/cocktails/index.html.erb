@@ -4,6 +4,7 @@
   <% @cocktails.each do |cocktail| %>
   <li>
     <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+    <%= cl_image_tag cocktail.photo, height: 660, width: 440, crop: :fill %>
   </li>
   <% end %>
 </ul>
